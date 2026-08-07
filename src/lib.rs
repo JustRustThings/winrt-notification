@@ -487,7 +487,7 @@ impl Toast {
         F: FnMut(Option<String>) -> Result<()> + Send + 'static,
     {
         self.on_activated = Some(TypedEventHandler::new(move |_, insp| {
-            let _ = f(Self::get_activated_action(&insp));
+            let _ = f(Self::get_activated_action(insp));
             Ok(())
         }));
         self
@@ -533,7 +533,7 @@ impl Toast {
         F: Fn(Option<ToastDismissalReason>) -> Result<()> + Send + 'static,
     {
         self.on_dismissed = Some(TypedEventHandler::new(move |_, args| {
-            let _ = f(Self::get_dismissed_reason(&args));
+            let _ = f(Self::get_dismissed_reason(args));
             Ok(())
         }));
         self

@@ -22,7 +22,7 @@ thiserror = "2"
 windows-version = "0.1"
 
   [dependencies.windows]
-  version = "0.56"
+  version = "0.52"
   features = [
   "Win32_Foundation",
   "Foundation_Collections",

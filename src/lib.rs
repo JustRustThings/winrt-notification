@@ -33,7 +33,7 @@
 /// For actions look at https://docs.microsoft.com/en-us/dotnet/api/microsoft.toolkit.uwp.notifications.toastactionscustom?view=win-comm-toolkit-dotnet-7.0
 
 use windows::{
-    core::{h, IInspectable, Interface},
+    core::{h, IInspectable, ComInterface},
     Data::Xml::Dom::XmlDocument,
     Foundation::{Collections::StringMap, TypedEventHandler},
     UI::Notifications::{
